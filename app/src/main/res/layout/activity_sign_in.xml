@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+
+    <View
+        android:id="@+id/ellipse_1"
+        android:layout_width="737dp"
+        android:layout_height="569dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="685dp"
+        android:background="@drawable/ellipse_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/kuizzer"
+        android:layout_width="139dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="top"
+        android:text="@string/kuizzer"
+        android:textAppearance="@style/kuizzer"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/ellipse_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse_1" />
+
+    <View
+        android:id="@+id/ellipse_2"
+        android:layout_width="657dp"
+        android:layout_height="734dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-124dp"
+        android:layout_marginTop="305dp"
+        android:background="@drawable/ellipse_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
+        app:layout_constraintVertical_bias="0.414">
+
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="393dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="180dp"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse_2"
+        app:layout_constraintStart_toStartOf="@+id/ellipse_2"
+        app:layout_constraintTop_toTopOf="@+id/ellipse_2">
+
+
+        <View
+            android:id="@+id/rectangle_1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/card"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="263dp">
+
+        </View>
+
+        <TextView
+            android:id="@+id/sign_in_title"
+            android:layout_width="89dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="109dp"
+            android:layout_marginTop="29dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/sign_in"
+            android:textAppearance="@style/sign_in_card_title" />
+
+        <TextView
+            android:id="@+id/e_mail_text"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="123dp"
+            android:layout_marginTop="92dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/e_mail_text"
+            android:textAppearance="@style/e_mail_text" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="196dp"
+            android:layout_height="29dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/text_input" />
+
+
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="88dp"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="111dp"
+            android:layout_marginTop="163dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/password_text"
+            android:textAppearance="@style/password_text" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="196dp"
+            android:layout_height="29dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="190dp"
+            android:background="@drawable/text_input"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/sign_in_button"
+            android:layout_width="108dp"
+            android:layout_height="31dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="326dp"
+            android:background="@drawable/card_button"
+            android:fontFamily="@font/poppins_bold"
+            android:onClick="signIn"
+            android:text="@string/sign_in"
+            android:textColor="#ffff" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

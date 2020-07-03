@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Kuizzer</string>
+    <string name="kuizzer">Kuizzer</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="e_mail_text">e-mail</string>
+    <string name="password_text">password</string>
+    <string name="password_again_text">password(again)</string>
+    <string name="username_text">username</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main3">MainActivity</string>
+    <string name="title_activity_home">MainActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="play_button">Play</string>
+    <string name="log_out_btn">Log out</string>
+    <string name="title_activity_categories">CategoriesActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_categories_selection">CategoriesSelectionActivity</string>
+
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "784908721387",
+    "firebase_url": "https://kuizzer.firebaseio.com",
+    "project_id": "kuizzer",
+    "storage_bucket": "kuizzer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784908721387:android:212e04fa2145d80b0132ae",
+        "android_client_info": {
+          "package_name": "com.hfkorkmaz.kuizzer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784908721387-2i1dgtbnet2u219s5kt3hncv5r9ibigm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoGHB0fFrN7Bx2N9f-_ZKEaWDt1m_vGf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784908721387-2i1dgtbnet2u219s5kt3hncv5r9ibigm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
