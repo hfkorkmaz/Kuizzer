@@ -34,7 +34,7 @@ class GameActivity : AppCompatActivity() {
     var runnable = Runnable { }
     var handler = Handler()
     val time: Long = 15000
-    val amount: Int = 3
+    val amount: Int = 10
     fun onTimeRunOut() {
         Toast.makeText(
             applicationContext,
