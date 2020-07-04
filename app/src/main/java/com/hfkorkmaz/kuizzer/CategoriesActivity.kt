@@ -26,11 +26,17 @@ class CategoriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories)
 
-//        val categoriesJson = URL("https://opentdb.com/api_category.php").readText()
-//        print(categoriesJson.javaClass.name)
         val task = GetCategoriesTask(this)
         task.execute()
 
+    }
+
+    fun startGame(categoryId:Int?, categoryName:String?){
+        val intent = Intent(applicationContext, GameActivity::class.java)
+        intent.putExtra("categoryId", categoryId)
+        intent.putExtra("categoryName", categoryName)
+        startActivity(intent)
+        finish()
     }
 
     companion object {
@@ -67,7 +73,6 @@ class CategoriesActivity : AppCompatActivity() {
                 if (activity == null || activity.isFinishing) return
                 activity.progressBar.visibility = View.GONE
                 activity.recyclerView.visibility = View.VISIBLE
-                Log.d("categories",result.let { it })
                 val categoriesJson : Categories? = Klaxon().parse<Categories>(result.let{it}.toString())
                 activity.categoriesData = categoriesJson
                 var layoutManager = LinearLayoutManager(activity)
@@ -77,13 +82,15 @@ class CategoriesActivity : AppCompatActivity() {
                 activity.adapter = CategoriesAdapter(categoriesJson!!.trivia_categories, this)
                 activity.recyclerView.adapter = activity.adapter
 
-                Log.d("categories json",categoriesJson?.trivia_categories?.get(0)?.name.toString())
             }
 
             override fun onCategoryClick(adapterPosition: Int) {
                 val activity = activityReference.get()
-                val id = activity?.categoriesData?.trivia_categories?.get(adapterPosition)?.id
-                //create intent to next activity
+                if (activity == null || activity.isFinishing) return
+                val id = activity.categoriesData?.trivia_categories?.get(adapterPosition)?.id
+                val name = activity.categoriesData?.trivia_categories?.get(adapterPosition)?.name
+                activity.startGame(id, name)
+
             }
 
 

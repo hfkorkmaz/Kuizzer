@@ -74,7 +74,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ellipse_2"
         app:layout_constraintTop_toTopOf="@+id/ellipse_2"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.162"
+        android:textSize="32sp"
+        />
 
     <Button
         android:id="@+id/sign_up"
@@ -95,7 +97,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ellipse_2"
         app:layout_constraintTop_toTopOf="@+id/ellipse_2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:textSize="32sp"
+        />
     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
