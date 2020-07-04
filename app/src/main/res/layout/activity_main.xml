@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity">
+    tools:context=".MainActivity">
 
     <View
         android:id="@+id/ellipse_1"
@@ -75,7 +75,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ellipse_2"
         app:layout_constraintTop_toTopOf="@+id/ellipse_2"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintVertical_bias="0.162"
+        />
 
     <Button
         android:id="@+id/log_out_btn"

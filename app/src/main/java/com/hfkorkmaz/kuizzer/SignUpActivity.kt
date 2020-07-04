@@ -53,13 +53,19 @@ class SignUpActivity : AppCompatActivity() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Log.d("profile", "User profile updated.")
+                            Toast.makeText(
+                                applicationContext,
+                                "Welcome: ${user?.displayName.toString()}",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            val intent = Intent(applicationContext, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
                         }
                     }
 
 
-                val intent = Intent(applicationContext, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+
             }
         }.addOnFailureListener { exception ->
             if (exception != null) {

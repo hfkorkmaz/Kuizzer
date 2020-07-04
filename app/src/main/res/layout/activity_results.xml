@@ -5,5 +5,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultsActivity">
+    <View
+        android:id="@+id/ellipse_1"
+        android:layout_width="737dp"
+        android:layout_height="569dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="685dp"
+        android:background="@drawable/ellipse_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="top"
+        android:text=""
+        android:textAppearance="@style/kuizzer"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ellipse_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
+        android:layout_marginLeft="20dp"
+        />
+
+    <View
+        android:id="@+id/ellipse_2"
+        android:layout_width="657dp"
+        android:layout_height="734dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-124dp"
+        android:layout_marginTop="305dp"
+        android:background="@drawable/ellipse_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
+        app:layout_constraintVertical_bias="0.414">
+
+
+    </View>
+    <Button
+        android:id="@+id/btn_go_home"
+        android:layout_width="213dp"
+        android:layout_height="47dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="94dp"
+        android:layout_marginBottom="550dp"
+        android:background="@drawable/sign_in"
+        android:fontFamily="@font/poppins_bold"
+        android:textAlignment="center"
+        android:textColor="#108AA5"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse_2"
+        app:layout_constraintEnd_toStartOf="@+id/ellipse_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ellipse_2"
+        app:layout_constraintTop_toTopOf="@+id/ellipse_2"
+        app:layout_constraintVertical_bias="0.162"
+        android:text="Go Home"
+        android:onClick="goHome"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

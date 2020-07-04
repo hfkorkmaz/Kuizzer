@@ -31,10 +31,11 @@ class GameActivity : AppCompatActivity() {
     var numberOfQuestionsAnsweredCorrectly: Int = 0
     var answered: Boolean = false
 
-    var runnable = Runnable {  }
+    var runnable = Runnable { }
     var handler = Handler()
-    var time:Int = 15000
-    fun onTimeRunOut(){
+    val time: Long = 15000
+    val amount: Int = 3
+    fun onTimeRunOut() {
         Toast.makeText(
             applicationContext,
             "Time ran out",
@@ -54,7 +55,7 @@ class GameActivity : AppCompatActivity() {
         if (quizData!!.results!![currentQuestion]!!.options!![3].isCorrect!!) {
             option_text4.setTextColor(Color.parseColor("#00CC00"))
         }
-        answered=true
+        answered = true
         if (quizData?.results?.size == currentQuestion + 1) {
             btn_finish.visibility = View.VISIBLE
         } else {
@@ -62,7 +63,7 @@ class GameActivity : AppCompatActivity() {
         }
     }
 
-    val timer = object: CountDownTimer(15000, 1000) {
+    val timer = object : CountDownTimer(time, 1000) {
 
 
         override fun onFinish() {
@@ -70,7 +71,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         override fun onTick(millisUntilFinished: Long) {
-            time_text.text=""+millisUntilFinished/1000 + " Seconds"
+            time_text.text = "" + millisUntilFinished / 1000 + " Seconds"
         }
     }
 
@@ -79,7 +80,7 @@ class GameActivity : AppCompatActivity() {
         setContentView(R.layout.activity_game)
         val intent = intent
 
-        val task = GetQuizDataTask(this, 10, intent.getIntExtra("categoryId", 10))
+        val task = GetQuizDataTask(this, amount, intent.getIntExtra("categoryId", 10))
         task.execute()
 
     }
@@ -249,6 +250,7 @@ class GameActivity : AppCompatActivity() {
     fun finishQuiz(view: View) {
         val intent = Intent(applicationContext, ResultsActivity::class.java)
         intent.putExtra("numberOfQuestionsAnsweredCorrectly", numberOfQuestionsAnsweredCorrectly)
+        intent.putExtra("amount", amount)
         startActivity(intent)
         finish()
     }
