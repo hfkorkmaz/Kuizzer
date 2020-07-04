@@ -13,7 +13,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.beust.klaxon.Klaxon
 import com.hfkorkmaz.kuizzer.adapters.CategoriesAdapter
-import com.hfkorkmaz.kuizzer.adapters.QuizOptionsAdapter
 import com.hfkorkmaz.kuizzer.models.*
 import kotlinx.android.synthetic.main.activity_categories.*
 import kotlinx.android.synthetic.main.activity_game.*
@@ -26,15 +25,14 @@ import kotlin.collections.ArrayList
 class GameActivity : AppCompatActivity() {
 
     var quizData: QuizFormattedData? = null
-    var adapter: QuizOptionsAdapter? = null
     var currentQuestion: Int = 0
     var numberOfQuestionsAnsweredCorrectly: Int = 0
     var answered: Boolean = false
 
-    var runnable = Runnable { }
-    var handler = Handler()
+
     val time: Long = 15000
     val amount: Int = 10
+
     fun onTimeRunOut() {
         Toast.makeText(
             applicationContext,
@@ -87,11 +85,7 @@ class GameActivity : AppCompatActivity() {
 
     fun onFistOptionClick(view: View) {
         if (answered) return
-        Toast.makeText(
-            applicationContext,
-            quizData!!.results!![currentQuestion]!!.options[0]!!.isCorrect!!.toString(),
-            Toast.LENGTH_SHORT
-        ).show()
+
         if (quizData!!.results!![currentQuestion]!!.options[0]!!.isCorrect!!) {
             option_text1.setTextColor(Color.parseColor("#00CC00"))
             numberOfQuestionsAnsweredCorrectly++
@@ -120,14 +114,9 @@ class GameActivity : AppCompatActivity() {
     }
 
     fun onSecondOptionClick(view: View) {
-        if (answered) {
-            return
-        }
-        Toast.makeText(
-            applicationContext,
-            quizData!!.results!![currentQuestion]!!.options[1]!!.isCorrect!!.toString(),
-            Toast.LENGTH_SHORT
-        ).show()
+        if (answered) return
+
+
         if (quizData!!.results!![currentQuestion]!!.options[1]!!.isCorrect!!) {
             option_text2.setTextColor(Color.parseColor("#00CC00"))
             numberOfQuestionsAnsweredCorrectly++
@@ -157,11 +146,7 @@ class GameActivity : AppCompatActivity() {
 
     fun onThirdOptionClick(view: View) {
         if (answered) return
-        Toast.makeText(
-            applicationContext,
-            quizData!!.results!![currentQuestion]!!.options[2]!!.isCorrect!!.toString(),
-            Toast.LENGTH_SHORT
-        ).show()
+
         if (quizData!!.results!![currentQuestion]!!.options[2]!!.isCorrect!!) {
             option_text3.setTextColor(Color.parseColor("#00CC00"))
             numberOfQuestionsAnsweredCorrectly++
@@ -190,11 +175,6 @@ class GameActivity : AppCompatActivity() {
     fun onFourthOptionClick(view: View) {
         if (answered) return
 
-        Toast.makeText(
-            applicationContext,
-            quizData!!.results!![currentQuestion]!!.options[3]!!.isCorrect!!.toString(),
-            Toast.LENGTH_SHORT
-        ).show()
         if (quizData!!.results!![currentQuestion]!!.options[3]!!.isCorrect!!) {
             option_text4.setTextColor(Color.parseColor("#00CC00"))
             numberOfQuestionsAnsweredCorrectly++
